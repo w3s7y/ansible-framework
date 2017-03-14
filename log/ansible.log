@@ -1,0 +1,6 @@
+2017-03-13 11:05:19,405 p=1897 u=ben |  ERROR! - the directory ./graylog-sidecar already exists.you can use --force to re-initialize this directory,
+however it will reset any main.yml files that may have
+been modified there already.
+2017-03-13 11:05:47,880 p=1908 u=ben |  ERROR! Failed to get data from the API server (https://galaxy.ansible.com/api/): a bytes-like object is required, not 'str' 
+2017-03-13 11:10:36,779 p=1991 u=ben |  ERROR! Failed to get data from the API server (https://galaxy.ansible.com/api/): a bytes-like object is required, not 'str' 
+2017-03-13 10:06:57,907 p=8 u=root |  - graylog-sidecar was created successfully
