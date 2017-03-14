@@ -4,3 +4,48 @@ been modified there already.
 2017-03-13 11:05:47,880 p=1908 u=ben |  ERROR! Failed to get data from the API server (https://galaxy.ansible.com/api/): a bytes-like object is required, not 'str' 
 2017-03-13 11:10:36,779 p=1991 u=ben |  ERROR! Failed to get data from the API server (https://galaxy.ansible.com/api/): a bytes-like object is required, not 'str' 
 2017-03-13 10:06:57,907 p=8 u=root |  - graylog-sidecar was created successfully
+2017-03-14 04:51:58,623 p=7 u=root |  ERROR! playbooks must be a list of plays
+2017-03-14 05:15:00,806 p=6 u=root |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/data/roles/graylog-sidecar/tasks/main.yml': line 4, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: echo hello
+  - debug:
+  ^ here
+
+2017-03-14 05:15:29,968 p=6 u=root |  PLAY [localhost] ***************************************************************
+2017-03-14 05:15:30,006 p=6 u=root |  TASK [setup] *******************************************************************
+2017-03-14 05:15:30,357 p=6 u=root |  fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "[Errno None] Unable to connect to port 22 on 127.0.0.1", "unreachable": true}
+2017-03-14 05:15:30,362 p=6 u=root |  	to retry, use: --limit @/data/playbook.retry
+
+2017-03-14 05:15:30,362 p=6 u=root |  PLAY RECAP *********************************************************************
+2017-03-14 05:15:30,363 p=6 u=root |  127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0   
+2017-03-14 05:18:29,754 p=6 u=root |  PLAY [localhost] ***************************************************************
+2017-03-14 05:18:29,771 p=6 u=root |  TASK [setup] *******************************************************************
+2017-03-14 05:18:30,040 p=6 u=root |  fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "[Errno None] Unable to connect to port 22 on 127.0.0.1", "unreachable": true}
+2017-03-14 05:18:30,046 p=6 u=root |  	to retry, use: --limit @/data/playbook.retry
+
+2017-03-14 05:18:30,046 p=6 u=root |  PLAY RECAP *********************************************************************
+2017-03-14 05:18:30,046 p=6 u=root |  127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0   
+2017-03-14 05:18:47,664 p=7 u=root |  PLAY [localhost] ***************************************************************
+2017-03-14 05:18:47,685 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-14 05:18:47,940 p=7 u=root |  fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "[Errno None] Unable to connect to port 22 on 127.0.0.1", "unreachable": true}
+2017-03-14 05:18:47,945 p=7 u=root |  	to retry, use: --limit @/data/playbook.retry
+
+2017-03-14 05:18:47,945 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-14 05:18:47,946 p=7 u=root |  127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0   
+2017-03-14 05:21:01,792 p=6 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-03-14 05:21:01,937 p=6 u=root |  PLAY [localhost] ***************************************************************
+2017-03-14 05:21:01,957 p=6 u=root |  TASK [setup] *******************************************************************
+2017-03-14 05:21:04,924 p=6 u=root |  ok: [localhost]
+2017-03-14 05:21:04,929 p=6 u=root |  TASK [graylog-sidecar : echo hello] ********************************************
+2017-03-14 05:21:04,948 p=6 u=root |  ok: [localhost] => {
+    "msg": "hello"
+}
+2017-03-14 05:21:04,951 p=6 u=root |  PLAY RECAP *********************************************************************
+2017-03-14 05:21:04,951 p=6 u=root |  localhost                  : ok=2    changed=0    unreachable=0    failed=0   

@@ -1,2 +1,5 @@
 ---
 # tasks file for graylog-sidecar
+- name: echo hello
+  debug:
+    msg: "hello"
