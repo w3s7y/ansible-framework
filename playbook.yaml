@@ -1,4 +1,4 @@
 ---
-- hosts: localhost
+- hosts: windoze
   roles:
-     - graylog-sidecar
+     - nxlog

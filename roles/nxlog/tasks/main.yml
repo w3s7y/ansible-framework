@@ -1,2 +1,28 @@
 ---
-# tasks file for nxlog
+# tasks file for nxlog, copies nxlog binary to host and
+# performs win_msi install of it.
+- name: print msi_name variable
+  debug:
+    msg: '{{msi_name}}'
+
+- name: Create temp folder on host
+  win_file:
+    path: 'C:\\temp'
+    state: directory
+
+- name: Copy nxlog binary to host
+  win_copy:
+    src: 'files/{{msi_name}}'
+    dest: 'C:\\temp\\{{msi_name}}'
+
+- name: Install nxlog
+  win_msi:
+    path: 'C:\\temp\\{{msi_name}}'
+    state: '{{pkg_state}}'
+    creates: 'C:\\Program Files (x86)\\nxlog\\README.txt'
+
+- name: Ensure windows service is in correct state.
+  win_service:
+    name: 'nxlog'
+    start_mode: '{{service_start_mode}}'
+    state: '{{service_state}}'

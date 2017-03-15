@@ -1,2 +1,14 @@
 ---
 # vars file for nxlog
+
+# Name of the msi file as it is in ../files/.
+msi_name: nxlog-ce-2.9.1716.msi
+
+# install the package?
+pkg_state: present
+
+# Graylog demands that the package be installed, but the service stopped so that
+# it can control the service itself, therefore set it to manual and Ensure
+# that its stopped
+service_start_mode: manual
+service_state: stopped
