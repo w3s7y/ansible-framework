@@ -1,2 +1,16 @@
 ---
 # tasks file for host-facts
+- name: Print hostname
+  debug:
+    msg: '{{ansible_hostname}}'
+
+- name: Print OS
+  debug:
+    msg: '{{ansible_os_name}}'
+
+- name: Run netstat
+  win_command: 'netstat -a'
+  register: netstat_output
+- name: Print netstat output
+  debug:
+    msg: '{{netstat_output.stdout_lines}}'

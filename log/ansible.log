@@ -1400,3 +1400,351 @@ Should be written as:
 2017-03-16 01:01:55,562 p=7 u=root |  ok: [192.168.3.10]
 2017-03-16 01:01:55,565 p=7 u=root |  PLAY RECAP *********************************************************************
 2017-03-16 01:01:55,566 p=7 u=root |  192.168.3.10               : ok=6    changed=1    unreachable=0    failed=0   
+2017-03-16 01:18:55,600 p=7 u=root |  PLAY [windoze] *****************************************************************
+2017-03-16 01:18:55,620 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-16 01:18:55,655 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:18:55,724 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:18:55,733 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:18:56,024 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:18:56,029 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:18:56,037 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:18:56,159 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:18:56,343 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:18:56,349 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:18:56,358 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:18:59,048 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8375
+2017-03-16 01:18:59,053 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:18:59,060 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:18:59,067 p=7 u=root |  ok: [192.168.3.10]
+2017-03-16 01:18:59,073 p=7 u=root |  TASK [nxlog : Create temp folder on host] **************************************
+2017-03-16 01:18:59,107 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:18:59,174 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:18:59,182 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:18:59,463 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1399
+2017-03-16 01:18:59,469 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:18:59,476 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:18:59,600 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:18:59,784 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:18:59,790 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:18:59,799 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:19:00,223 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-16 01:19:00,229 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:19:00,234 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:19:00,241 p=7 u=root |  ok: [192.168.3.10]
+2017-03-16 01:19:00,246 p=7 u=root |  TASK [nxlog : Copy nxlog binary to host] ***************************************
+2017-03-16 01:19:00,272 p=7 u=root |  skipping: [192.168.3.10]
+2017-03-16 01:19:00,275 p=7 u=root |  TASK [nxlog : Install nxlog] ***************************************************
+2017-03-16 01:19:00,319 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:19:00,384 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:19:00,393 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:19:00,684 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:19:00,690 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:19:00,698 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:19:00,822 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:19:01,003 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:19:01,011 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:19:01,021 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:19:01,485 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 3011
+2017-03-16 01:19:01,491 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:19:01,496 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:19:01,501 p=7 u=root |  changed: [192.168.3.10]
+2017-03-16 01:19:01,505 p=7 u=root |  TASK [nxlog : Ensure windows service is in correct state.] *********************
+2017-03-16 01:19:01,528 p=7 u=root |  skipping: [192.168.3.10]
+2017-03-16 01:19:01,532 p=7 u=root |  TASK [nxlog : Remove install directory if pkg_state == 'absent'] ***************
+2017-03-16 01:19:01,571 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:19:01,634 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:19:01,643 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:19:01,934 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:19:01,940 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:19:01,948 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:19:02,072 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:19:02,254 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:19:02,261 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:19:02,271 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:19:02,674 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-16 01:19:02,680 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:19:02,686 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:19:02,693 p=7 u=root |  ok: [192.168.3.10]
+2017-03-16 01:19:02,695 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-16 01:19:02,696 p=7 u=root |  192.168.3.10               : ok=4    changed=1    unreachable=0    failed=0   
+2017-03-16 01:22:40,597 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:22:40,663 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:22:40,673 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:22:40,954 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:22:40,960 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:22:40,967 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:22:41,089 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:22:41,274 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:22:41,279 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:22:41,288 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:22:43,936 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8307
+2017-03-16 01:22:43,941 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:22:43,948 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:22:43,959 p=1 u=root |  192.168.3.10 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_architecture": "64-bit", 
+        "ansible_bios_date": "12/01/2006", 
+        "ansible_bios_version": "VirtualBox", 
+        "ansible_date_time": {
+            "date": "2017-03-16", 
+            "day": "16", 
+            "epoch": "1489659695.58497", 
+            "hour": "10", 
+            "iso8601": "2017-03-16T10:21:35Z", 
+            "iso8601_basic": "20170316T102135569499", 
+            "iso8601_basic_short": "20170316T102135", 
+            "iso8601_micro": "2017-03-16T10:21:35.569499Z", 
+            "minute": "21", 
+            "month": "03", 
+            "second": "35", 
+            "time": "10:21:35", 
+            "tz": "GMT Standard Time", 
+            "tz_offset": "+00:00", 
+            "weekday": "Thursday", 
+            "weekday_number": "4", 
+            "weeknumber": "10", 
+            "year": "2017"
+        }, 
+        "ansible_distribution": "Microsoft Windows Server 2012 R2 Standard", 
+        "ansible_distribution_major_version": "6", 
+        "ansible_distribution_version": "6.3.9600.0", 
+        "ansible_domain": "", 
+        "ansible_env": {
+            "ALLUSERSPROFILE": "C:\\ProgramData", 
+            "APPDATA": "C:\\Users\\vagrant\\AppData\\Roaming", 
+            "COMPUTERNAME": "VAGRANT-2012-R2", 
+            "ComSpec": "C:\\Windows\\system32\\cmd.exe", 
+            "CommonProgramFiles": "C:\\Program Files\\Common Files", 
+            "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files", 
+            "CommonProgramW6432": "C:\\Program Files\\Common Files", 
+            "FP_NO_HOST_CHECK": "NO", 
+            "HOMEDRIVE": "C:", 
+            "HOMEPATH": "\\Users\\vagrant", 
+            "LOCALAPPDATA": "C:\\Users\\vagrant\\AppData\\Local", 
+            "LOGONSERVER": "\\\\VAGRANT-2012-R2", 
+            "MODULE_COMPLEX_ARGS": "{\"_ansible_version\": \"2.2.1.0\", \"_ansible_selinux_special_fs\": [\"fuse\", \"nfs\", \"vboxsf\", \"ramfs\"], \"_ansible_no_log\": false, \"_ansible_module_name\": \"setup\", \"_ansible_verbosity\": 0, \"_ansible_syslog_facility\": \"LOG_USER\", \"_ansible_diff\": false, \"_ansible_debug\": false, \"_ansible_check_mode\": false}", 
+            "NUMBER_OF_PROCESSORS": "2", 
+            "OS": "Windows_NT", 
+            "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL", 
+            "PROCESSOR_ARCHITECTURE": "AMD64", 
+            "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 70 Stepping 1, GenuineIntel", 
+            "PROCESSOR_LEVEL": "6", 
+            "PROCESSOR_REVISION": "4601", 
+            "PROMPT": "$P$G", 
+            "PSExecutionPolicyPreference": "Unrestricted", 
+            "PSModulePath": "C:\\Users\\vagrant\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules", 
+            "PUBLIC": "C:\\Users\\Public", 
+            "Path": "C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0", 
+            "ProgramData": "C:\\ProgramData", 
+            "ProgramFiles": "C:\\Program Files", 
+            "ProgramFiles(x86)": "C:\\Program Files (x86)", 
+            "ProgramW6432": "C:\\Program Files", 
+            "SystemDrive": "C:", 
+            "SystemRoot": "C:\\Windows", 
+            "TEMP": "C:\\Users\\vagrant\\AppData\\Local\\Temp", 
+            "TMP": "C:\\Users\\vagrant\\AppData\\Local\\Temp", 
+            "TestVariable": "An updated Value", 
+            "USERDOMAIN": "VAGRANT-2012-R2", 
+            "USERDOMAIN_ROAMINGPROFILE": "VAGRANT-2012-R2", 
+            "USERNAME": "vagrant", 
+            "USERPROFILE": "C:\\Users\\vagrant", 
+            "windir": "C:\\Windows"
+        }, 
+        "ansible_fqdn": "vagrant-2012-r2.", 
+        "ansible_hostname": "VAGRANT-2012-R2", 
+        "ansible_interfaces": [
+            {
+                "default_gateway": "10.0.2.2", 
+                "dns_domain": null, 
+                "interface_index": 12, 
+                "interface_name": "Intel(R) PRO/1000 MT Desktop Adapter"
+            }, 
+            {
+                "default_gateway": null, 
+                "dns_domain": null, 
+                "interface_index": 14, 
+                "interface_name": "Intel(R) PRO/1000 MT Desktop Adapter #2"
+            }
+        ], 
+        "ansible_ip_addresses": [
+            "10.0.2.15", 
+            "fe80::e488:b85c:5262:ff86", 
+            "192.168.3.10", 
+            "fe80::cd61:3074:2620:53d2"
+        ], 
+        "ansible_kernel": "6.3.9600.0", 
+        "ansible_lastboot": "2017-03-16 06:28:41Z", 
+        "ansible_machine_id": "S-1-5-21-3541430928-2051711210-1391384369", 
+        "ansible_memtotal_mb": 2048, 
+        "ansible_nodename": "vagrant-2012-r2.", 
+        "ansible_os_family": "Windows", 
+        "ansible_os_name": "Microsoft Windows Server 2012 R2 Standard", 
+        "ansible_owner_contact": "", 
+        "ansible_owner_name": "", 
+        "ansible_powershell_version": 4, 
+        "ansible_processor": [
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz", 
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz"
+        ], 
+        "ansible_processor_cores": 2, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 2, 
+        "ansible_product_name": "VirtualBox", 
+        "ansible_product_serial": "0", 
+        "ansible_reboot_pending": false, 
+        "ansible_swaptotal_mb": 0, 
+        "ansible_system": "Win32NT", 
+        "ansible_system_description": "", 
+        "ansible_system_vendor": "innotek GmbH", 
+        "ansible_uptime_seconds": 13975, 
+        "ansible_user_dir": "C:\\Users\\vagrant", 
+        "ansible_user_gecos": "", 
+        "ansible_user_id": "vagrant", 
+        "ansible_user_sid": "S-1-5-21-3541430928-2051711210-1391384369-1001", 
+        "ansible_win_rm_certificate_expires": "2018-03-14 16:33:44", 
+        "ansible_windows_domain": "WORKGROUP", 
+        "module_setup": true
+    }, 
+    "changed": false
+}
+2017-03-16 01:23:57,301 p=7 u=root |  PLAY [windoze] *****************************************************************
+2017-03-16 01:23:57,319 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-16 01:23:57,353 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:23:57,423 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:23:57,432 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:23:57,714 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:23:57,719 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:23:57,726 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:23:57,849 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:23:58,033 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:23:58,039 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:23:58,048 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:00,619 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8375
+2017-03-16 01:24:00,625 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:00,633 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:24:00,641 p=7 u=root |  ok: [192.168.3.10]
+2017-03-16 01:24:00,644 p=7 u=root |  TASK [nxlog : Create temp folder on host] **************************************
+2017-03-16 01:24:00,676 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:24:00,744 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:24:00,752 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:01,034 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:24:01,040 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:01,047 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:01,169 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:24:01,354 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:24:01,359 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:01,368 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:01,783 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-16 01:24:01,790 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:01,795 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:24:01,801 p=7 u=root |  ok: [192.168.3.10]
+2017-03-16 01:24:01,806 p=7 u=root |  TASK [nxlog : Copy nxlog binary to host] ***************************************
+2017-03-16 01:24:01,828 p=7 u=root |  skipping: [192.168.3.10]
+2017-03-16 01:24:01,832 p=7 u=root |  TASK [nxlog : Install nxlog] ***************************************************
+2017-03-16 01:24:01,874 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:24:01,944 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:24:01,951 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:02,244 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:24:02,250 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:02,262 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:02,383 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:24:02,574 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:24:02,580 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:02,590 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:03,072 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 3011
+2017-03-16 01:24:03,079 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:03,085 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:24:03,091 p=7 u=root |  changed: [192.168.3.10]
+2017-03-16 01:24:03,094 p=7 u=root |  TASK [nxlog : Ensure windows service is in correct state.] *********************
+2017-03-16 01:24:03,117 p=7 u=root |  skipping: [192.168.3.10]
+2017-03-16 01:24:03,120 p=7 u=root |  TASK [nxlog : Remove install directory if pkg_state == 'absent'] ***************
+2017-03-16 01:24:03,158 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:24:03,224 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:24:03,232 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:03,514 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:24:03,520 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:03,529 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:03,652 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:24:03,834 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:24:03,840 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:03,850 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:04,253 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-16 01:24:04,259 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:04,265 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:24:04,272 p=7 u=root |  ok: [192.168.3.10]
+2017-03-16 01:24:04,276 p=7 u=root |  TASK [host-facts : Print hostname] *********************************************
+2017-03-16 01:24:04,312 p=7 u=root |  ok: [192.168.3.10] => {
+    "msg": "VAGRANT-2012-R2"
+}
+2017-03-16 01:24:04,316 p=7 u=root |  TASK [host-facts : Print OS] ***************************************************
+2017-03-16 01:24:04,354 p=7 u=root |  ok: [192.168.3.10] => {
+    "msg": "Microsoft Windows Server 2012 R2 Standard"
+}
+2017-03-16 01:24:04,358 p=7 u=root |  TASK [host-facts : Run netstat] ************************************************
+2017-03-16 01:24:04,390 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-16 01:24:04,454 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-16 01:24:04,463 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:04,743 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-16 01:24:04,750 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:04,758 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:04,883 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-16 01:24:05,074 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-16 01:24:05,080 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:05,090 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-16 01:24:10,401 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 5107
+2017-03-16 01:24:10,406 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-16 01:24:10,410 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-16 01:24:10,417 p=7 u=root |  changed: [192.168.3.10]
+2017-03-16 01:24:10,421 p=7 u=root |  TASK [host-facts : Print netstat output] ***************************************
+2017-03-16 01:24:10,458 p=7 u=root |  ok: [192.168.3.10] => {
+    "msg": [
+        "", 
+        "Active Connections", 
+        "", 
+        "  Proto  Local Address          Foreign Address        State", 
+        "  TCP    0.0.0.0:22             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:135            vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:445            vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:3389           vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:5985           vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:5986           vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:47001          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:49152          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:49153          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:49154          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:49155          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:49157          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    0.0.0.0:49158          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    10.0.2.15:139          vagrant-2012-r2:0      LISTENING", 
+        "  TCP    192.168.3.10:139       vagrant-2012-r2:0      LISTENING", 
+        "  TCP    192.168.3.10:5986      MACBOOKPRO-8B23:57462  ESTABLISHED", 
+        "  TCP    [::]:22                vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:135               vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:445               vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:3389              vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:5985              vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:5986              vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:47001             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:49152             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:49153             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:49154             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:49155             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:49157             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::]:49158             vagrant-2012-r2:0      LISTENING", 
+        "  TCP    [::1]:49215            vagrant-2012-r2:47001  TIME_WAIT", 
+        "  TCP    [::1]:49216            vagrant-2012-r2:47001  TIME_WAIT", 
+        "  UDP    0.0.0.0:3389           *:*                    ", 
+        "  UDP    0.0.0.0:5355           *:*                    ", 
+        "  UDP    10.0.2.15:137          *:*                    ", 
+        "  UDP    10.0.2.15:138          *:*                    ", 
+        "  UDP    192.168.3.10:137       *:*                    ", 
+        "  UDP    192.168.3.10:138       *:*                    ", 
+        "  UDP    [::]:3389              *:*                    ", 
+        "  UDP    [::]:5355              *:*                    "
+    ]
+}
+2017-03-16 01:24:10,462 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-16 01:24:10,463 p=7 u=root |  192.168.3.10               : ok=8    changed=2    unreachable=0    failed=0   
