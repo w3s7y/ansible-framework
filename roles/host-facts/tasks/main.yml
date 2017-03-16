@@ -4,13 +4,26 @@
   debug:
     msg: '{{ansible_hostname}}'
 
-- name: Print OS
+- name: Print OS Family
   debug:
-    msg: '{{ansible_os_name}}'
+    msg: '{{ansible_os_family}}'
 
-- name: Run netstat
-  win_command: 'netstat -a'
-  register: netstat_output
-- name: Print netstat output
+- name: Run netstat (windows)
+  win_command: 'netstat -a -p tcp'
+  register: netstat_output_win
+  when: ansible_os_family == 'Windows'
+
+- name: Run netstat (linux)
+  command: 'netstat -a -A inet'
+  register: netstat_output_linux
+  when: ansible_os_family != 'Windows'
+
+- name: Print netstat output (windows)
   debug:
-    msg: '{{netstat_output.stdout_lines}}'
+    msg: '{{netstat_output_win.stdout_lines}}'
+  when: ansible_os_family == 'Windows'
+
+- name: Print netstat output (windows)
+  debug:
+    msg: '{{netstat_output_linux.stdout_lines}}'
+  when: ansible_os_family != 'Windows'

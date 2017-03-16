@@ -1,18 +1,20 @@
 ---
 # tasks file for nxlog, copies nxlog binary to host and
 # performs win_msi install of it.
-- name: Create temp folder on host
+- name: Create C:\temp folder on host
   win_file:
     path: 'C:\\temp'
     state: directory
 
-- name: Copy nxlog binary to host
+- name: Copy nxlog msi to host
   win_copy:
     src: 'files/{{msi_name}}'
     dest: 'C:\\temp\\{{msi_name}}'
   when: pkg_state == 'present'
 
-- name: Install nxlog
+# No 'when' statement on this as calling it with state: absent removes the
+# windows services for us.
+- name: Install nxlog msi file
   win_msi:
     path: 'C:\\temp\\{{msi_name}}'
     state: '{{pkg_state}}'
