@@ -26,3 +26,9 @@
     name: 'nxlog'
     start_mode: '{{service_start_mode}}'
     state: '{{service_state}}'
+  when: pkg_state == 'present'
+
+- name: Remove install directory if pkg_state == 'absent'
+  win_file:
+    path: 'C:\\Program Files (x86)\\nxlog'
+    state: '{{pkg_state}}'
