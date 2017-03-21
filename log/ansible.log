@@ -3714,3 +3714,464 @@ The offending line appears to be:
 2017-03-16 06:38:18,290 p=7 u=root |  PLAY RECAP *********************************************************************
 2017-03-16 06:38:18,291 p=7 u=root |  192.168.3.10               : ok=5    changed=1    unreachable=0    failed=0   
 2017-03-16 06:38:18,292 p=7 u=root |  192.168.3.16               : ok=5    changed=1    unreachable=0    failed=0   
+2017-03-20 19:17:09,138 p=7 u=root |  PLAY [Configure the windows hosts] *********************************************
+2017-03-20 19:17:09,172 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-20 19:17:09,236 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:17:39,251 p=7 u=root |  fatal: [192.168.3.10]: UNREACHABLE! => {"changed": false, "msg": "ssl: HTTPSConnectionPool(host='192.168.3.10', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7ffa6e5c1190>, 'Connection to 192.168.3.10 timed out. (connect timeout=30)'))", "unreachable": true}
+2017-03-20 19:17:39,261 p=7 u=root |  	to retry, use: --limit @/data/playbook.retry
+
+2017-03-20 19:17:39,262 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-20 19:17:39,262 p=7 u=root |  192.168.3.10               : ok=0    changed=0    unreachable=1    failed=0   
+2017-03-20 19:23:00,435 p=7 u=root |  PLAY [Configure the windows hosts] *********************************************
+2017-03-20 19:23:00,453 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-20 19:23:00,487 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:00,577 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:00,586 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:00,887 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:00,893 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:00,901 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:01,027 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:01,238 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:01,244 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:01,253 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:04,112 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8387
+2017-03-20 19:23:04,117 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:04,124 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:04,132 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:23:04,135 p=7 u=root |  TASK [nxlog : Create C:\temp folder on host] ***********************************
+2017-03-20 19:23:04,170 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:04,238 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:04,246 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:04,527 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:04,533 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:04,541 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:04,685 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:04,848 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:04,854 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:04,864 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:05,277 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-20 19:23:05,284 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:05,290 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:05,296 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:23:05,301 p=7 u=root |  TASK [nxlog : Copy nxlog msi to host] ******************************************
+2017-03-20 19:23:05,401 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:05,477 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:05,486 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:05,768 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:05,775 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:05,784 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:05,922 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:06,097 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:06,104 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:06,114 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:06,677 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1771
+2017-03-20 19:23:06,684 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:06,693 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:06,977 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1399
+2017-03-20 19:23:06,984 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:06,991 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:07,114 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:07,297 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:07,304 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:07,312 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:07,737 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-20 19:23:07,744 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:07,751 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:07,757 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:23:07,759 p=7 u=root |  TASK [nxlog : Install nxlog msi file] ******************************************
+2017-03-20 19:23:07,799 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:07,867 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:07,876 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:08,157 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:08,164 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:08,172 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:08,313 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:08,488 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:08,494 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:08,504 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:08,957 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1335
+2017-03-20 19:23:08,964 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:08,970 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:08,977 p=7 u=root |  changed: [192.168.3.10]
+2017-03-20 19:23:08,980 p=7 u=root |  TASK [nxlog : Ensure windows service is in correct state.] *********************
+2017-03-20 19:23:09,023 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:09,087 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:09,097 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:09,387 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:09,393 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:09,401 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:09,525 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:09,707 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:09,714 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:09,723 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:10,157 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1407
+2017-03-20 19:23:10,163 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:10,169 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:10,176 p=7 u=root |  fatal: [192.168.3.10]: FAILED! => {"changed": false, "failed": true, "msg": "Service 'nxlog' not installed"}
+2017-03-20 19:23:10,183 p=7 u=root |  	to retry, use: --limit @/data/playbook.retry
+
+2017-03-20 19:23:10,183 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-20 19:23:10,183 p=7 u=root |  192.168.3.10               : ok=4    changed=1    unreachable=0    failed=1   
+2017-03-20 19:23:19,330 p=7 u=root |  PLAY [Configure the windows hosts] *********************************************
+2017-03-20 19:23:19,349 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-20 19:23:19,384 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:19,448 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:19,457 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:19,747 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:19,753 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:19,760 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:19,917 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:20,087 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:20,093 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:20,104 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:22,563 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8387
+2017-03-20 19:23:22,568 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:22,575 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:22,582 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:23:22,586 p=7 u=root |  TASK [nxlog : Create C:\temp folder on host] ***********************************
+2017-03-20 19:23:22,619 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:22,687 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:22,696 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:22,987 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:22,994 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:23,002 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:23,140 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:23,327 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:23,334 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:23,343 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:23,767 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-20 19:23:23,773 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:23,777 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:23,783 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:23:23,788 p=7 u=root |  TASK [nxlog : Copy nxlog msi to host] ******************************************
+2017-03-20 19:23:23,854 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:23,917 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:23,926 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:24,207 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:24,214 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:24,226 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:24,351 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:24,547 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:24,554 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:24,566 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:25,137 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1771
+2017-03-20 19:23:25,144 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:25,153 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:25,447 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:25,453 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:25,461 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:25,587 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:25,777 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:25,784 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:25,793 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:26,287 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-20 19:23:26,297 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:26,306 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:26,312 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:23:26,317 p=7 u=root |  TASK [nxlog : Install nxlog msi file] ******************************************
+2017-03-20 19:23:26,374 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:26,447 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:26,457 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:26,757 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:26,762 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:26,770 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:26,921 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:27,097 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:27,104 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:27,114 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:27,657 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 3011
+2017-03-20 19:23:27,662 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:27,667 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:27,673 p=7 u=root |  changed: [192.168.3.10]
+2017-03-20 19:23:27,676 p=7 u=root |  TASK [nxlog : Ensure windows service is in correct state.] *********************
+2017-03-20 19:23:27,723 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:27,787 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:27,795 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:28,097 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:28,104 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:28,111 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:28,250 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:28,437 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:28,444 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:28,455 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:29,197 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1427
+2017-03-20 19:23:29,204 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:29,210 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:29,217 p=7 u=root |  changed: [192.168.3.10]
+2017-03-20 19:23:29,219 p=7 u=root |  TASK [nxlog : Remove install directory if pkg_state == 'absent'] ***************
+2017-03-20 19:23:29,259 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:23:29,327 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:23:29,338 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:29,647 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:23:29,653 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:29,660 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:29,781 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:23:29,977 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:23:29,984 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:29,994 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:23:30,427 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-20 19:23:30,434 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:23:30,439 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:23:30,445 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:23:30,448 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-20 19:23:30,448 p=7 u=root |  192.168.3.10               : ok=6    changed=2    unreachable=0    failed=0   
+2017-03-20 19:24:33,491 p=7 u=root |  PLAY [Configure the windows hosts] *********************************************
+2017-03-20 19:24:33,509 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-20 19:24:33,547 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:24:33,617 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:24:33,625 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:33,917 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:24:33,923 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:33,930 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:34,051 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:24:34,237 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:24:34,243 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:34,252 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:36,794 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8387
+2017-03-20 19:24:36,800 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:36,807 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:24:36,815 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:24:36,818 p=7 u=root |  TASK [nxlog : Create C:\temp folder on host] ***********************************
+2017-03-20 19:24:36,849 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:24:36,917 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:24:36,925 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:37,207 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:24:37,213 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:37,221 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:37,357 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:24:37,527 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:24:37,533 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:37,542 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:37,947 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-20 19:24:37,954 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:37,960 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:24:37,965 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:24:37,968 p=7 u=root |  TASK [nxlog : Copy nxlog msi to host] ******************************************
+2017-03-20 19:24:37,991 p=7 u=root |  skipping: [192.168.3.10]
+2017-03-20 19:24:37,994 p=7 u=root |  TASK [nxlog : Install nxlog msi file] ******************************************
+2017-03-20 19:24:38,035 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:24:38,097 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:24:38,106 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:38,387 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:24:38,393 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:38,407 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:38,530 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:24:38,717 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:24:38,724 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:38,734 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:39,216 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 3011
+2017-03-20 19:24:39,222 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:39,228 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:24:39,234 p=7 u=root |  changed: [192.168.3.10]
+2017-03-20 19:24:39,237 p=7 u=root |  TASK [nxlog : Ensure windows service is in correct state.] *********************
+2017-03-20 19:24:39,259 p=7 u=root |  skipping: [192.168.3.10]
+2017-03-20 19:24:39,262 p=7 u=root |  TASK [nxlog : Remove install directory if pkg_state == 'absent'] ***************
+2017-03-20 19:24:39,302 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-20 19:24:39,367 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-20 19:24:39,376 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:39,657 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-20 19:24:39,664 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:39,671 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:39,811 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-20 19:24:39,977 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-20 19:24:39,983 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:39,993 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-20 19:24:40,398 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-20 19:24:40,404 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-20 19:24:40,410 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-20 19:24:40,416 p=7 u=root |  ok: [192.168.3.10]
+2017-03-20 19:24:40,418 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-20 19:24:40,419 p=7 u=root |  192.168.3.10               : ok=4    changed=1    unreachable=0    failed=0   
+2017-03-21 01:44:08,802 p=7 u=root |  PLAY [Configure the windows hosts] *********************************************
+2017-03-21 01:44:08,839 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-21 01:44:08,910 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:44:08,986 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:44:08,997 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:09,305 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1399
+2017-03-21 01:44:09,311 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:09,319 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:09,446 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:44:09,656 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:44:09,663 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:09,673 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:12,649 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8371
+2017-03-21 01:44:12,655 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:12,661 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:44:12,670 p=7 u=root |  ok: [192.168.3.10]
+2017-03-21 01:44:12,672 p=7 u=root |  TASK [nxlog : Create C:\temp folder on host] ***********************************
+2017-03-21 01:44:12,705 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:44:12,776 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:44:12,785 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:13,066 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1399
+2017-03-21 01:44:13,071 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:13,079 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:13,202 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:44:13,396 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:44:13,402 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:13,412 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:13,816 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-21 01:44:13,822 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:13,828 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:44:13,836 p=7 u=root |  ok: [192.168.3.10]
+2017-03-21 01:44:13,841 p=7 u=root |  TASK [nxlog : Copy nxlog msi to host] ******************************************
+2017-03-21 01:44:13,919 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:44:13,986 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:44:13,995 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:14,276 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:44:14,282 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:14,291 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:14,414 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:44:14,606 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:44:14,612 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:14,623 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:15,176 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1771
+2017-03-21 01:44:15,182 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:15,190 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:15,466 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:44:15,472 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:15,480 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:15,627 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:44:15,796 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:44:15,802 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:15,813 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:16,226 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-21 01:44:16,232 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:16,237 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:44:16,244 p=7 u=root |  ok: [192.168.3.10]
+2017-03-21 01:44:16,248 p=7 u=root |  TASK [nxlog : Install nxlog msi file] ******************************************
+2017-03-21 01:44:16,289 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:44:16,356 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:44:16,366 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:16,655 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:44:16,662 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:16,671 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:16,795 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:44:16,976 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:44:16,982 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:16,993 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:17,436 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1335
+2017-03-21 01:44:17,442 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:17,447 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:44:17,455 p=7 u=root |  changed: [192.168.3.10]
+2017-03-21 01:44:17,458 p=7 u=root |  TASK [nxlog : Ensure windows service is in correct state.] *********************
+2017-03-21 01:44:17,502 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:44:17,566 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:44:17,575 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:17,866 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:44:17,872 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:17,880 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:18,004 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:44:18,196 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:44:18,203 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:18,213 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:18,636 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1407
+2017-03-21 01:44:18,642 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:18,647 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:44:18,655 p=7 u=root |  fatal: [192.168.3.10]: FAILED! => {"changed": false, "failed": true, "msg": "Service 'nxlog' not installed"}
+2017-03-21 01:44:18,661 p=7 u=root |  	to retry, use: --limit @/data/playbook.retry
+
+2017-03-21 01:44:18,661 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-21 01:44:18,662 p=7 u=root |  192.168.3.10               : ok=4    changed=1    unreachable=0    failed=1   
+2017-03-21 01:44:57,494 p=7 u=root |  PLAY [Configure the windows hosts] *********************************************
+2017-03-21 01:44:57,512 p=7 u=root |  TASK [setup] *******************************************************************
+2017-03-21 01:44:57,551 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:44:57,616 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:44:57,625 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:57,906 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:44:57,911 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:57,919 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:44:58,045 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:44:58,226 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:44:58,232 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:44:58,241 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:00,663 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 8375
+2017-03-21 01:45:00,668 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:00,675 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:45:00,686 p=7 u=root |  ok: [192.168.3.10]
+2017-03-21 01:45:00,689 p=7 u=root |  TASK [nxlog : Create C:\temp folder on host] ***********************************
+2017-03-21 01:45:00,721 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:45:00,787 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:45:00,795 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:01,076 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:45:01,081 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:01,089 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:01,216 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:45:01,406 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:45:01,413 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:01,424 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:01,836 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-21 01:45:01,842 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:01,848 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:45:01,855 p=7 u=root |  ok: [192.168.3.10]
+2017-03-21 01:45:01,859 p=7 u=root |  TASK [nxlog : Copy nxlog msi to host] ******************************************
+2017-03-21 01:45:01,926 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:45:01,996 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:45:02,004 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:02,286 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:45:02,292 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:02,301 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:02,425 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:45:02,615 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:45:02,621 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:02,633 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:03,186 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1771
+2017-03-21 01:45:03,192 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:03,200 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:03,486 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1399
+2017-03-21 01:45:03,492 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:03,500 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:03,626 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:45:03,816 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:45:03,822 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:03,832 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:04,246 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-21 01:45:04,252 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:04,257 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:45:04,265 p=7 u=root |  ok: [192.168.3.10]
+2017-03-21 01:45:04,268 p=7 u=root |  TASK [nxlog : Install nxlog msi file] ******************************************
+2017-03-21 01:45:04,309 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:45:04,376 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:45:04,385 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:04,666 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1399
+2017-03-21 01:45:04,672 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:04,680 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:04,806 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:45:04,996 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:45:05,005 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:05,014 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:05,507 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 3007
+2017-03-21 01:45:05,512 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:05,518 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:45:05,524 p=7 u=root |  changed: [192.168.3.10]
+2017-03-21 01:45:05,526 p=7 u=root |  TASK [nxlog : Ensure windows service is in correct state.] *********************
+2017-03-21 01:45:05,572 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:45:05,646 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:45:05,653 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:05,946 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:45:05,952 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:05,964 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:06,087 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:45:06,276 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:45:06,284 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:06,293 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:06,966 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1427
+2017-03-21 01:45:06,972 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:06,978 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:45:06,984 p=7 u=root |  changed: [192.168.3.10]
+2017-03-21 01:45:06,987 p=7 u=root |  TASK [nxlog : Remove install directory if pkg_state == 'absent'] ***************
+2017-03-21 01:45:07,026 requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): 192.168.3.10
+2017-03-21 01:45:07,096 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1621
+2017-03-21 01:45:07,106 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:07,396 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1403
+2017-03-21 01:45:07,402 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:07,410 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:07,535 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 753
+2017-03-21 01:45:07,716 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1367
+2017-03-21 01:45:07,723 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:07,732 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 847
+2017-03-21 01:45:08,135 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 1323
+2017-03-21 01:45:08,142 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 757
+2017-03-21 01:45:08,146 requests.packages.urllib3.connectionpool https://192.168.3.10:5986 "POST /wsman HTTP/1.1" 200 602
+2017-03-21 01:45:08,152 p=7 u=root |  ok: [192.168.3.10]
+2017-03-21 01:45:08,154 p=7 u=root |  PLAY RECAP *********************************************************************
+2017-03-21 01:45:08,154 p=7 u=root |  192.168.3.10               : ok=6    changed=2    unreachable=0    failed=0   

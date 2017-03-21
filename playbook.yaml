@@ -4,14 +4,7 @@
   hosts:
     - windoze
   roles:
-     #- { role: 'nxlog',
-     #pkg_state: 'absent',
-     #service_start_mode: 'manual',
-     #service_state: 'stopped' }
-     - { role: 'host-facts' }
-
-- name: Configure bentos
-  hosts:
-    - bentos
-  roles:
-    - { role: 'host-facts' }
+     - { role: 'nxlog',
+     pkg_state: 'present',
+     service_start_mode: 'manual',
+     service_state: 'stopped' }

@@ -1,0 +1,7 @@
+---
+# tasks file for nginx
+- name: Update pkg lists
+  apk:
+    name: nginx
+    state: present
+    upgrade: yes
