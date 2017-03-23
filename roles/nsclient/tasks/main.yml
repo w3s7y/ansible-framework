@@ -1,0 +1,42 @@
+---
+# tasks file for nsclient
+- name: Create C:\temp folder on host
+  win_file:
+    path: 'C:\\temp'
+    state: directory
+
+- name: Copy nsclient msi to host
+  win_copy:
+    src: 'files/{{msi_name}}'
+    dest: 'C:\\temp\\{{msi_name}}'
+  when: pkg_state == 'present'
+
+- name: Install nsclient msi file
+  win_command: 'msiexec.exe /i C:\\temp\\{{msi_name}} /quiet'
+  when: pkg_state == 'present'
+
+- name: Copy nsclient.ini template to hosts
+  win_template:
+    src: 'templates/nsclient.ini.j2'
+    dest: 'C:\\Program Files\\NSClient++\\nsclient.ini'
+  when: pkg_state == 'present'
+  notify: 'restart nscp'
+
+- name: Uninstall nsclient
+  win_command: 'msiexec.exe /x C:\\temp\\{{msi_name}} /quiet'
+  when: pkg_state == 'absent'
+
+- name: Ensure windows service is in correct state.
+  win_service:
+    name: 'nscp'
+    start_mode: '{{service_start_mode}}'
+    state: '{{service_state}}'
+  when: pkg_state == 'present'
+
+- name: Open windows firewall to allow connections to nsclient
+  win_firewall_rule:
+    name: 'allow nsclient traffic in'
+    action: 'allow'
+    direction: 'in'
+    state: '{{pkg_state}}'
+    localport: 31337

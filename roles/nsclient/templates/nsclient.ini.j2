@@ -1,0 +1,17 @@
+[/settings/default]
+password = {{nrpe_password}}
+allowed hosts = {{nagios_host}}
+
+[/settings/NRPE/server]
+ssl options = no-sslv2,no-sslv3
+verify mode = peer-cert
+insecure = false
+
+[/modules]
+CheckExternalScripts = 1
+CheckHelpers = 1
+CheckEventLog = 1
+CheckNSCP = 1
+CheckDisk = 1
+CheckSystem = 1
+NRPEServer = 1

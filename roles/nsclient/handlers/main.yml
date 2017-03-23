@@ -1,0 +1,6 @@
+---
+# handlers file for nsclient
+- name: restart nscp
+  win_service:
+    name: 'nscp'
+    state: 'restarted'
